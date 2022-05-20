@@ -1,0 +1,37 @@
+
+<form [formGroup]="customerForm">
+    {{customerForm.value | json}}
+    <br>
+    {{customer | json}}
+<table>
+    <tr>
+        <td><label for="">Loan Id</label></td>
+        <td><input type="text" formControlName="loanId" name="txtId"></td>
+    </tr>
+    <tr>
+        <td><label for="">Customer Name</label></td>
+        <td><input type="text" formControlName="customerName" name="txtName"></td>
+    </tr>
+    <tr>
+        <td><label for="">Loan Amount</label></td>
+        <td><input type="text" formControlName="loanAmount" name="txtloanAmount"></td>
+    </tr>
+    <tr>
+        <td><label for="">Date Of Loan</label></td>
+        <td><input type="text" formControlName="dateOfLoan" name="txtdateOfLoan"></td>
+    </tr>
+    <tr>
+        <td><label for="">Tenure</label></td>
+        <td><input type="text" formControlName="tenure" name="txttenure"></td>
+    </tr>
+    <tr>
+        <td><label for="">Rate Of Interest</label></td>
+        <td><input type="text" formControlName="rateOfInterest" name="txtrateOfInterest"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="add()">Add</button>
+        </td>
+    </tr>
+</table>
+</form>

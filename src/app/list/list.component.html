@@ -1,0 +1,23 @@
+<p>list works!</p>
+<table border="1">
+    <tr>
+        <th>Loan Id</th>
+        <th>Customer Name</th>
+        <th>Loan Amount</th>
+        <th>Date Of Loan</th>
+        <th>Tenure</th>
+        <th>Rate Of Interest</th>
+        <th>Interest Amount</th>
+        <th>EMI</th>
+    </tr>
+    <tr *ngFor="let l of loanCustomers">
+        <td>{{l.loanId}}</td>
+        <td>{{l.customerName}}</td>
+        <td>{{l.loanAmount|currency:'INR':true:'.2-2'}}</td>
+        <td>{{l.dateOfLoan}}</td>
+        <td>{{l.tenure}}</td>
+        <td>{{l.rateOfInterest}}</td>
+        <td>{{l.computeInterestAmount()|currency:'INR':true:'.2-2'}}</td>
+        <td>{{l.computeEMI()|currency:'INR':true:'.2-2'}}</td>
+    </tr>
+</table>
